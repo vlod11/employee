@@ -1,0 +1,59 @@
+@import '../themes/main-theme.scss';
+//colors
+$text-size-title-1: 16px;
+
+$primary-light-color:$primary-light;
+$primary-color: $primary;
+$primary-dark-color: $primary-dark;
+$primary-text-color:white;
+$primary-text-accent-color: black;
+
+$accent-color: $accent-light;
+$accent-light-color: $accent;
+$accent-dark-color: $accent-dark;
+$accent-text-color: white;
+$accent-text-accent-color: black;
+
+$warning-color: $warn-light;
+$warning-light-color: $warn;
+$warning-dark-color: $warn-dark;
+$warning-text-color:black;
+$warning-text-accent-color: white;
+
+// Todo please add icon sizes
+
+//sizes
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 300px;
+
+$tiny-size: 360px;
+$small-size: 600px;
+$medium-size: 1024px;
+$large-size: 1440px;
+
+$margin-l: 8px;
+$margin-m: 16px;
+$margin-b: 32px;
+
+$padding-l: 8px;
+$podding-m: 16px;
+$padding-b: 32px;
+
+$icon-l: 32px;
+$icon-m: 48px;
+$icon-b: 64px; 
+
+
+//blocks
+$tiny-block: 84px;    // 4 columns
+$tiny-gutter: 12px;   // 3 gutter
+
+$small-block: 138px;  // 4 columns
+$small-gutter: 16px;  // 3 gutter
+
+$medium-block: 114px; // 8 columns
+$medium-gutter: 16px; // 7 gutter
+

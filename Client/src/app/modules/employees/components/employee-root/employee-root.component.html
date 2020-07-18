@@ -1,0 +1,9 @@
+<div class="page-root">
+  <div class="page-root-content">
+    <div class="controls">
+      <button mat-raised-button (click)="addPosition()"> Add position </button>
+      <button mat-raised-button (click)="addEmployee()"> Add employee </button>
+    </div>
+    <app-employee-table [employees$]="employees$"></app-employee-table>
+  </div>
+</div>
