@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import * as fromMaterial from './material-imports';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import * as fromMaterial from './material-imports';
     fromMaterial.MatDialogModule,
     fromMaterial.MatFormFieldModule,
     fromMaterial.MatInputModule,
-    fromMaterial.MatNativeDateModule
+    fromMaterial.MatNativeDateModule,
+    TranslateModule
   ],
   exports: [
     CommonModule,
@@ -37,7 +39,8 @@ import * as fromMaterial from './material-imports';
     fromMaterial.MatSelectModule,
     fromMaterial.MatOptionModule,
     fromMaterial.MatDatepickerModule,
-    fromMaterial.MatNativeDateModule
+    fromMaterial.MatNativeDateModule,
+    TranslateModule
   ]
 })
 export class SharedModule { }

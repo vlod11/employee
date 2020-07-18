@@ -11,8 +11,7 @@ export class Employee {
         const result = new Employee();
         if (dto) {
             result.id = dto.id;
-            result.name = dto.name;
-            result.surname = dto.surname;
+            result.name = dto.name + ' ' + dto.surname;
 
             const lastJob = dto.positions.sort((a, b) => {
                 const lastJobDiff = b.hiredAtUtc - a.hiredAtUtc;

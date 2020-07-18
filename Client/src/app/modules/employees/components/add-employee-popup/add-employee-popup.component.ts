@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -7,7 +7,8 @@ import { DialogData } from './dialog-data';
 @Component({
   selector: 'app-add-employee-popup',
   templateUrl: './add-employee-popup.component.html',
-  styleUrls: ['./add-employee-popup.component.scss']
+  styleUrls: ['./add-employee-popup.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddEmployeePopupComponent implements OnInit {
   public positionAddForm = new FormGroup({
@@ -45,7 +46,7 @@ export class AddEmployeePopupComponent implements OnInit {
 
 //TODO: delete Utc from hired and left
 
-  onNoClick(): void {
+onCloseClick(): void {
     this.dialogRef.close();
   }
 

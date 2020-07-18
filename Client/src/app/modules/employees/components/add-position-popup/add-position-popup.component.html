@@ -1,14 +1,14 @@
-<h1 mat-dialog-title>Добавить должность</h1>
+<h1 mat-dialog-title>{{'New position' | translate}}</h1>
 <mat-dialog-content>
   <div [formGroup]="positionAddForm">
   <mat-form-field>
-    <mat-label>Должность</mat-label>
+    <mat-label>{{'Position' | translate}} </mat-label>
     <input required matInput formControlName="titleInput">
   </mat-form-field>
 </div>
 </mat-dialog-content>
 <mat-dialog-actions class="buttons" mat-dialog-actions align="end">
-  <button mat-button (click)="onNoClick()">Закрыть</button>
-  <button mat-flat-button color="accent" class="unlock-button" (click)="onCreateClick()"
-    cdkFocusInitial>Добавить</button>
+  <button mat-button (click)="onCloseClick()">{{'Close' | translate}}</button>
+  <button mat-flat-button color="accent" (click)="onCreateClick()"
+    cdkFocusInitial>{{'Add' | translate}}</button>
 </mat-dialog-actions>

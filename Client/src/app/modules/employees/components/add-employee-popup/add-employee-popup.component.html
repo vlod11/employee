@@ -1,47 +1,47 @@
-<h1 mat-dialog-title>Новый сотрудник</h1>
+<h1 mat-dialog-title>{{'New employee' | translate}}</h1>
 <mat-dialog-content>
   <div [formGroup]="positionAddForm">
     <p>
       <mat-form-field class="title-input" appearance="standard">
-        <mat-label>Name</mat-label>
+        <mat-label>{{'Name' | translate}}</mat-label>
         <input formControlName="nameInput" required matInput [placeholder]="Title">
       </mat-form-field>
     </p>
     
     <p>
       <mat-form-field class="title-input" appearance="standard">
-        <mat-label>Surname</mat-label>
+        <mat-label>{{'Surname' | translate}}</mat-label>
         <input formControlName="surnameInput" required matInput [placeholder]="Title">
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field class="title-input" appearance="standard">
-        <mat-label>Salary</mat-label>
+        <mat-label>{{'Salary' | translate}}</mat-label>
         <input formControlName="salaryInput" min="0" type="number" required matInput [placeholder]="Title">
       </mat-form-field>
     </p>
     <p>
       <mat-form-field class="given-at-input">
-        <mat-label>Hired At</mat-label>
+        <mat-label>{{'Hired Date' | translate}}</mat-label>
         <input required formControlName="hiredAtInput" matInput [matDatepicker]="picker1">
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-        <mat-datepicker startView="multi-year" #picker1></mat-datepicker>
+        <mat-datepicker #picker1></mat-datepicker>
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field class="given-at-input">
-        <mat-label>Left at</mat-label>
+        <mat-label>{{'Left Date' | translate}}</mat-label>
         <input required formControlName="leftAtInput" matInput [matDatepicker]="picker2">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker startView="multi-year" #picker2></mat-datepicker>
+        <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field class="type-input">
-        <mat-label>Position</mat-label>
+        <mat-label>{{'Position' | translate}}</mat-label>
         <mat-select required formControlName="positionInput">
           <mat-option *ngFor="let item of data.positions | async" [value]="item.id">
             {{item.title}}
@@ -53,7 +53,7 @@
   </div>
 </mat-dialog-content>
 <mat-dialog-actions class="buttons" mat-dialog-actions align="end">
-  <button mat-button (click)="onNoClick()">Закрыть</button>
+  <button mat-button (click)="onCloseClick()">Закрыть</button>
   <button mat-flat-button color="accent" class="unlock-button" (click)="onCreateClick()"
     cdkFocusInitial>Добавить</button>
 </mat-dialog-actions>
