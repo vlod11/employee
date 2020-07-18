@@ -39,8 +39,8 @@ namespace Services.Services
                                            {
                                                new EmployeePosition
                                                {
-                                                   HiredAtUtc = employeeAddRequest.HiredAtUtc,
-                                                   LeftAtUtc = employeeAddRequest.LeftAtUtc,
+                                                   HiredAt = employeeAddRequest.HiredAt,
+                                                   LeftAt = employeeAddRequest.LeftAt,
                                                    PositionId = employeeAddRequest.PositionId,
                                                    Title = position.Title,
                                                    Salary = employeeAddRequest.Salary

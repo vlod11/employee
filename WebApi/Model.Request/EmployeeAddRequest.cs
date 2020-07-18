@@ -6,8 +6,10 @@ namespace Requests
 {
     public class EmployeeAddRequest
     {
-        public DateTimeOffset HiredAtUtc { get; set; }
-        public DateTimeOffset? LeftAtUtc { get; set; }
+        [Required]
+        public DateTimeOffset HiredAt { get; set; }
+        [Required]
+        public DateTimeOffset? LeftAt { get; set; }
         [RequiredNotEmpty]
         public string Name { get; set; }
         [RequiredNotEmpty]

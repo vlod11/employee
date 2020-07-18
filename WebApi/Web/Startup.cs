@@ -1,6 +1,5 @@
 using AutoMapper;
 using Common.Helpers;
-using Common.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -28,9 +27,6 @@ namespace Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<MongoDbOptions>(
-                Configuration.GetSection(nameof(MongoDbOptions)));
-
             var mongoDbName = Configuration["MongoDb:DatabaseName"];
             var mongoDbConnectionString = Configuration["MongoDb:ConnectionString"];
             var mongoConnectionUrl = new MongoUrl(mongoDbConnectionString);

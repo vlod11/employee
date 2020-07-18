@@ -7,7 +7,7 @@ namespace Core.EmployeeAggregate
         public string PositionId { get; set; }
         public string Title { get; set; }
         public int Salary { get; set; }
-        public DateTimeOffset HiredAtUtc { get; set; }
-        public DateTimeOffset? LeftAtUtc { get; set; }
+        public DateTimeOffset HiredAt { get; set; }
+        public DateTimeOffset? LeftAt { get; set; }
     }
 }
