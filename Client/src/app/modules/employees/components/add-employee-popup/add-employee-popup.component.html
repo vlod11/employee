@@ -2,45 +2,21 @@
 <mat-dialog-content>
   <div [formGroup]="positionAddForm">
     <p>
-      <mat-form-field class="title-input" appearance="standard">
+      <mat-form-field appearance="standard">
         <mat-label>{{'Name' | translate}}</mat-label>
-        <input formControlName="nameInput" required matInput [placeholder]="Title">
+        <input formControlName="nameInput" required matInput>
       </mat-form-field>
     </p>
     
     <p>
-      <mat-form-field class="title-input" appearance="standard">
+      <mat-form-field appearance="standard">
         <mat-label>{{'Surname' | translate}}</mat-label>
-        <input formControlName="surnameInput" required matInput [placeholder]="Title">
+        <input formControlName="surnameInput" required matInput>
       </mat-form-field>
     </p>
 
     <p>
-      <mat-form-field class="title-input" appearance="standard">
-        <mat-label>{{'Salary' | translate}}</mat-label>
-        <input formControlName="salaryInput" min="0" type="number" required matInput [placeholder]="Title">
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field class="given-at-input">
-        <mat-label>{{'Hired Date' | translate}}</mat-label>
-        <input required formControlName="hiredAtInput" matInput [matDatepicker]="picker1">
-        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-        <mat-datepicker #picker1></mat-datepicker>
-      </mat-form-field>
-    </p>
-
-    <p>
-      <mat-form-field class="given-at-input">
-        <mat-label>{{'Left Date' | translate}}</mat-label>
-        <input required formControlName="leftAtInput" matInput [matDatepicker]="picker2">
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field>
-    </p>
-
-    <p>
-      <mat-form-field class="type-input">
+      <mat-form-field>
         <mat-label>{{'Position' | translate}}</mat-label>
         <mat-select required formControlName="positionInput">
           <mat-option *ngFor="let item of data.positions | async" [value]="item.id">
@@ -50,10 +26,35 @@
       </mat-form-field>
     </p>
 
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>{{'Salary' | translate}}</mat-label>
+        <input formControlName="salaryInput" min="0" type="number" required matInput>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <mat-label>{{'Hired Date' | translate}}</mat-label>
+        <input required formControlName="hiredAtInput" matInput [matDatepicker]="hiredAtPicker">
+        <mat-datepicker-toggle matSuffix [for]="hiredAtPicker"></mat-datepicker-toggle>
+        <mat-datepicker #hiredAtPicker></mat-datepicker>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <mat-label>{{'Left Date' | translate}}</mat-label>
+        <input required formControlName="leftAtInput" matInput [matDatepicker]="leftDatePicker">
+        <mat-datepicker-toggle matSuffix [for]="leftDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #leftDatePicker></mat-datepicker>
+      </mat-form-field>
+    </p>
+
   </div>
 </mat-dialog-content>
-<mat-dialog-actions class="buttons" mat-dialog-actions align="end">
+<mat-dialog-actions mat-dialog-actions align="end">
   <button mat-button (click)="onCloseClick()">Закрыть</button>
-  <button mat-flat-button color="accent" class="unlock-button" (click)="onCreateClick()"
+  <button mat-flat-button color="accent" (click)="onCreateClick()"
     cdkFocusInitial>Добавить</button>
 </mat-dialog-actions>

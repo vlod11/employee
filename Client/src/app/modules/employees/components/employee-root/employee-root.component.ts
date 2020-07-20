@@ -43,14 +43,6 @@ export class EmployeeRootComponent implements OnInit {
             error => {
               // TODO: send error to some global place
             });
-        // if (postId && result) {
-        //   this.postService.unlockPost(postId).subscribe(() => {
-        //       }
-        //     },
-        //     error => {
-        //       // TODO: send error to some global place
-        //       this.popupService.showError(error);
-        //     });
       }
     });
   }

@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
 
-export interface DialogData {
+export interface IDialogData {
     positions$: Observable<Position[]>;
   }

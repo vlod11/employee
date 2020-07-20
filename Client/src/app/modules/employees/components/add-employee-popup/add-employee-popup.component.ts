@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/cor
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { DialogData } from './dialog-data';
+import { IDialogData } from './dialog-data';
 
 @Component({
   selector: 'app-add-employee-popup',
@@ -22,7 +22,7 @@ export class AddEmployeePopupComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<AddEmployeePopupComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+    @Inject(MAT_DIALOG_DATA) public data: IDialogData) { }
 
   ngOnInit() {
   }
