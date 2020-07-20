@@ -8,7 +8,7 @@ import { Employee } from 'src/app/shared/models/employee';
   styleUrls: ['./employee-table.component.scss']
 })
 export class EmployeeTableComponent implements OnInit {
-  public displayedColumns: string[] = ['id', 'name', 'salary', 'lastJobTitle', 'hiredAtUtc', 'leftAtUtc'];
+  public displayedColumns: string[] = ['id', 'name', 'salary', 'lastJobTitle', 'hiredAt', 'leftAt'];
   @Input() public employees$: Observable<Employee[]>;
   constructor() { }
 

@@ -4,8 +4,8 @@ export class Employee {
     surname: string;
     salary: number;
     lastJobTitle: string;
-    hiredAtUtc: Date;
-    leftAtUtc: Date;
+    hiredAt: Date;
+    leftAt: Date;
 
     public static assemble(dto: any) {
         const result = new Employee();
@@ -14,13 +14,13 @@ export class Employee {
             result.name = dto.name + ' ' + dto.surname;
 
             const lastJob = dto.positions.sort((a, b) => {
-                const lastJobDiff = b.hiredAtUtc - a.hiredAtUtc;
+                const lastJobDiff = b.hiredAt - a.hiredAt;
                 if (lastJobDiff) { return lastJobDiff; }
             })[0];
 
             result.lastJobTitle = lastJob.title;
-            result.hiredAtUtc = lastJob.hiredAtUtc;
-            result.leftAtUtc = lastJob.leftAtUtc;
+            result.hiredAt = lastJob.hiredAt;
+            result.leftAt = lastJob.leftAt;
             result.salary = lastJob.salary;
         }
         return result;

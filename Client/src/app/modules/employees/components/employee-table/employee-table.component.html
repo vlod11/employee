@@ -20,14 +20,14 @@
     <mat-cell *matCellDef="let element"> {{element.salary | currency:'USD'}} </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="hiredAtUtc">
+  <ng-container matColumnDef="hiredAt">
     <mat-header-cell *matHeaderCellDef> {{'Hired Date' | translate}} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.hiredAtUtc | date: 'dd/MM/yyyy'}} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.hiredAt | date: 'dd/MM/yyyy'}} </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="leftAtUtc">
+  <ng-container matColumnDef="leftAt">
     <mat-header-cell *matHeaderCellDef> {{'Left Date' | translate}} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.leftAtUtc | date: 'dd/MM/yyyy'}} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.leftAt | date: 'dd/MM/yyyy'}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -39,12 +39,10 @@ export class AddEmployeePopupComponent implements OnInit {
       positionId: this.positionAddForm.controls['positionInput'].value,
       name: this.positionAddForm.controls['nameInput'].value,
       surname: this.positionAddForm.controls['surnameInput'].value,
-      hiredAtUtc: this.positionAddForm.controls['hiredAtInput'].value,
-      leftAtUtc: leftAtInputValue,
+      hiredAt: this.positionAddForm.controls['hiredAtInput'].value,
+      leftAt: leftAtInputValue,
     });
   }
-
-//TODO: delete Utc from hired and left
 
 onCloseClick(): void {
     this.dialogRef.close();
