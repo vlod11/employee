@@ -59,7 +59,7 @@ namespace Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //TODO add only friendly origins
+            //TODO: add only friendly origins
             app.UseCors(options =>
             {
                 options.AllowAnyMethod();
@@ -74,7 +74,7 @@ namespace Web
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "UniHub API V1"); });
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1"); });
 
             app.UseRouting();
 
